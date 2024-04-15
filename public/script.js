@@ -113,8 +113,22 @@ const getSupplies = () => {
     const form = document.getElementById("add-edit-craft-form");
     const formData = new FormData(form);
     formData.append("supplies", getSupplies());
-    let response;
+    // client side validation 
+    const nameLength = document.getElementById("name");
+    const descriptionLength = document.getElementById("description");
+    if (nameLength.value.length < 3 || descriptionLength.value.length < 3) {
+        alert("Please enter a name or description that is at least three characters long, thanks. :) ");
+        return;
+    }
+    const imageInput = document.getElementById("img");
+    // if there isn't an image selected, send alert and deny save
+    if (!imageInput.files[0]) {
+        alert("Don't forget an image!");
+        return;
+    }
 
+    let response;
+    
     const craftId = form.querySelector('input[name="_id"]').value; 
 
     if (!craftId || craftId == "-1") {
