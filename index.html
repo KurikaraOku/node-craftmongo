@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Buy and Sell Crafts <a href="#" id="add-link">+</a></h1>
+</header>
+<div id="craft-list" class="flex-container"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Craft Modal content -->
+  <div class="modal-content" id="craft-modal">
+      <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+      <div class = "row">
+            <img id="modal-img" src="" alt="Craft Image">
+</div>
+        <h3>Description:</h3>
+        <p id="modal-description"></p>
+        <h3>Supplies:</h3>
+        <ul id="modal-supplies"></ul>
+    </div>
+</div>
+
+<!-- Add Craft Modal -->
+<div id="add-craft-modal" class="modal">
+  <!-- Add Craft Modal content -->
+  <div class="supply-content" id="supply-modal">
+      <span class="close">&times;</span>
+      <h3>Make Changes to your Craft</h3>
+      <form id="add-edit-craft-form" method="post">
+          <input type="hidden" name="_id" value="-1" />
+          <div class="name">
+          <p>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+          </p>
+      </div>
+      <div class ="description">
+          <p>
+              <label for="description">Description:</label>
+              <input type="text" id="description" name="description" required />
+          </p>
+        </div>
+          <section id="img-prev-section">
+              <img id="img-prev">
+              <label for="img" id="choose-file">Select an Image</label>
+              <input type="file" id="img" name="img" accept="image/*" />
+          </section>
+      
+          <p id="supplies-p">
+              <label class="inline">Supplies:</label>
+              <a href="#" id="add-supply">Add Supply</a>
+          </p>
+      
+          <section id="supply-boxes">
+            <input type="text" />
+          </section>
+      
+          <p>
+              <button id="cancel">Cancel</button>
+              <button id="save">Save</button>
+          </p>
+      </form>
+    </div>
+</div>
+
+</body>
+</html>

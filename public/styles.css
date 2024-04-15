@@ -1,0 +1,286 @@
+/* Body */
+body {
+    margin-top: 20px;
+    background-color: #453F78;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 30px #ff00de, 0 0 35px #ff00de;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 30px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00de, 0 0 15px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 30px #ff00de, 0 0 35px #ff00de;
+  }
+}
+
+body h1 {
+    margin-top: 100px;
+    font-size: 40px;
+    margin-left: 25px;
+    text-align: left;
+    color: #f2efea;
+    animation: glow 2s infinite alternate;
+}
+
+body a {
+  text-decoration: none;
+  font-size: larger;
+  color: #FFC94A;
+}
+
+.flex-container {
+    display: flex;
+    flex: 25%;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: flex-start; 
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; 
+  }
+  
+ /* Crafts Modal Content */
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  min-height: 70%; 
+  border-radius: 15px;
+  box-sizing: border-box; 
+}
+
+.modal-content img {
+  display: block;
+  float: left;
+  max-width: 35%; 
+  margin: 0 auto; 
+}
+
+.modal-content p {
+  font-size: 13.5px;
+}
+
+.modal-content h2 {
+  text-align: left;
+  font-size: 40px;
+  color: #453F78;
+}
+
+.modal-content h3 {
+  color: #453F78;
+}
+
+/* Add Supply Modal */
+.supply-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  min-height: 58%; 
+  border-radius: 15px;
+  box-sizing: border-box; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; /* transition effect */
+}
+
+/* Show the modal when it has the 'show' class */
+.supply-content.show {
+  opacity: 1; 
+}
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* animation to the supply modal */
+.supply-content, .modal-content {
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeIn 0.3s ease forwards; 
+}
+
+.supply-content img {
+  display: block;
+  float: left;
+  max-width: 35%; 
+  margin: 0 auto; 
+}
+
+.supply-content p {
+  font-size: 13.5px;
+}
+
+.supply-content h2 {
+  text-align: left;
+  font-size: 40px;
+  color: #453F78;
+}
+
+.supply-content h3 {
+  color: #453F78;
+  font-size: 30px;
+}
+
+.name {
+  margin-left: 100px;
+}
+
+.description {
+  margin-left: 65px;
+}
+  /* Close Button */
+  .close {
+    color: #7ed2ff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+
+  #add-edit-craft-form input[type="text"],
+#add-edit-craft-form input[type="file"],
+#add-edit-craft-form input[type="supply"] {
+    width: 200px; 
+}
+
+#edit-link {
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  margin-left: 15px;
+}
+
+#delete-link {
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
+#edit-link, #delete-link {
+  font-size: 40px;
+}
+  
+  #modal-supplies {
+    list-style-type: none;
+}
+
+/* Buttons */
+  #save, #cancel, #add-supply, #choose-file {
+    background-color: #467dd4; 
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #choose-file {
+    position: absolute; /* Set the position to absolute */
+    bottom: -70px; /* Adjust the vertical position */
+    right: 0; /* Adjust the horizontal position */
+    cursor: pointer;
+}
+
+  /* image section */ 
+
+  #img {
+    padding-right: 600px;
+  }
+
+  .insertedImage {
+    max-width: 320px;
+    flex: 25%;
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+  
+  #img-prev-section {
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 150px;
+    border: 1px solid #000000;
+    max-width: 150px;
+    margin-right: 5px;
+    height: 200px;
+    float: left;
+  }
+  #img-prev {
+    display: block;
+    margin: auto;
+    max-width: 150px;
+    height: 200px;
+    float: left;
+  }
+
+  #supplies-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#supplies-p {
+  margin-top: 0; /* Remove default top margin for <p> */
+}
+
+#supplies-p label.inline {
+  margin-right: 5px; /* Adjust margin as needed */
+}
+  
+#choose-file {
+  cursor: pointer;
+}
+
+#img {
+  display: none; /* Hide the input file button */
+}
+    /* Hover effect */
+    .close:hover {
+color: #fff719;
+cursor: pointer;
+    }
+
+    .columns img {
+      float: left;
+    }
+
+    
+/* Responsive layout - makes a two column layout instead of four columns */
+@media (max-width: 800px) {
+  .flex-container {
+      justify-content: space-between;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .flex-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+}
